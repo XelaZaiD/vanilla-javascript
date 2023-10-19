@@ -1,0 +1,94 @@
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // rem, en, % -- 62.5% es medida magica
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+h1 {
+    font-size: 3.7rem; // 1 rem = 10px
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    width: 326px;//px porque es estatico
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); //ejeX, ejeY, Degradado, Color
+
+    &-header {
+        width: 100%;
+        display: block;
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1.5px solid #9999995f;
+
+        &-img {
+            border: 5px solid white; //width, style, color, inherit
+            border-radius: 50%;
+            margin-top: -53px;
+            background-color: white;
+        }
+
+        &-name {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            span {
+                color: var(--dark-gray);
+                font-weight: 400;
+                margin-left: 0.7rem;
+            }
+        }
+
+        &-city {
+            color: var(--dark-gray);
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            margin-top: 0;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-around;//space-evenly;
+
+        &-social {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            p{
+                letter-spacing: 1px;
+                color: #060606bc;
+            }
+        }
+    }
+}

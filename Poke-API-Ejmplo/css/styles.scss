@@ -1,0 +1,159 @@
+:root{
+    --dark-width: hsl(0, 0%, 100%);
+    --very-poke: #FFDE00;
+    --dark-grayish-blue: #4A00E0;
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // rem, en, % -- 62.5% es medida magica
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+
+}
+body {
+    font-family: 'Pokemon Solid', sans-serif;
+    background: #870000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #870000, #FFD200, 870000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #870000, #FFD200, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1 {
+    font-size: 3.7rem; // 1 rem = 10px
+}
+
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    background: #870000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #870000, #ff4b1f, #ffc500);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #870000, #ff4b1f, #ffc500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 3px 3px rgba(250, 250, 250, 0.663), -1em 0 .4em rgba(255, 255, 255, 0.59);
+
+    &-header {
+        border-bottom: 3mm ridge rgba(248, 2, 2, 0.999);
+        width: 100%;
+        display: block;
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-img {
+            width: 180px;
+            height: 180px;
+            border: 6px red; 
+            border-style: solid double;
+            border-radius: 50%;
+            margin-top: -93px;
+            background-color: white;
+        }
+
+        &-imgReload {
+            width: 30px;
+            height: 30px;
+        }
+
+        @keyframes rotate {from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}}
+        @-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(360deg);}}
+        &-imgReload:hover {
+        -webkit-animation: 3s rotate linear infinite;
+        animation: 3s rotate linear infinite;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        }
+
+        &-name {    
+            text-transform: capitalize;
+            -webkit-text-stroke: 1px #3B4CCA;
+            color: var(--very-poke);
+            font-size: 2.5rem;
+            margin-top: 2rem;
+            letter-spacing: 0.5px;
+            font-weight: 900;
+            span {
+                font-size: 2rem;
+                -webkit-text-stroke: 0.5px var(--very-poke);
+                color: var(--dark-grayish-blue);
+                font-weight: 700;
+                margin-left: 0.7rem;
+            }
+        }
+
+        &-expe {
+            border-bottom: 3mm ridge rgba(248, 2, 2, 0.307);
+            -webkit-text-stroke: 0.5px #3B4CCA;
+            color: var(--very-poke);
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            margin-top: 0;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    &-footer {
+        border-bottom: 3mm ridge rgba(248, 2, 2, 0.999);
+        -webkit-text-stroke: 0.5px #3B4CCA;
+        color: var(--very-poke);
+        font-weight: 900;
+        display: flex;
+        justify-content: space-around;//space-evenly;
+
+        &-stats {
+            border-bottom: 3mm ridge rgba(248, 2, 2, 0.307);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            p{
+                letter-spacing: 0.5px;
+                color: var(--very-poke);
+            }
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100vw;
+    -webkit-text-stroke: 1px #3B4CCA;
+    color: var(--very-poke);
+    
+    &-api{
+        -webkit-text-stroke: 1.5px #3B4CCA;
+        color: var(--very-poke);
+    }
+}

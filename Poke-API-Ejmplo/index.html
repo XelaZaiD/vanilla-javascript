@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poké API</title>
+    <link rel="shortcut icon" href="./images/estrella.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <main class="flex">
+        <!-- <img src="./images/banner-pokemon.png" alt="imgHeader" class="img-pokemon"> -->
+        <!-- template-card   -->
+        <footer class="footer">
+            <p>Created By ARDO - <span><a rel="Paul Hallett" href="https://pokeapi.co/" target="_blank" class="footer-api">Poké API</a></span></p>
+        </footer>
+    </main>
+    <div id="particles-js"></div>
+    <template id="template-card">
+        <article class="card">
+            <!-- <a rel="Paul Hallett" href="https://pokeapi.co/" class="card-title">Poké API</a> -->
+            <!-- <hr> -->
+            <img src="./images/banner-pokemon.png" alt="imgHeader" class="card-header">
+            <!-- <hr> -->
+            <div class="card-body">
+                <img src="./images/Perfil.jpg" alt="imgProfile" class="card-body-img">
+                <h1 class="card-body-name">Ash Ketchum<span class="card-body-age">10</span></h1>
+                <p class="card-body-expe" role="button">Pueblo Paleta      <span><img src="./images/girar.png" alt="Reload" class="card-body-imgReload" style="cursor:pointer"></span></p>
+            </div>
+            <div class="card-footer">
+                <div class="card-footer-stats">
+                    <h3>80K</h3>
+                    <p>Ataque</p>
+                </div>
+                <div class="card-footer-stats">
+                    <h3>803K</h3>
+                    <p>Defensa</p>
+                </div>
+                <div class="card-footer-stats">
+                    <h3>1.4K</h3>
+                    <p>Especial</p>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <!-- <p class="card-footer-by">Created By ARDO</p> -->
+        </article>
+    </template>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
